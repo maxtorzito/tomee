@@ -38,6 +38,8 @@
             <scope>provided</scope>
         </dependency>
         
+        
+        
         <dependency>
             <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
             <artifactId>myfaces-extcdi-core-api</artifactId>
