@@ -14,14 +14,14 @@
     </modules>
   
   
-  <!--
+  
     <repositories>
         <repository>
             <id>apache-repo-snapshot</id>
             <name>Apache Maven Repository</name>
             <url>https://repository.apache.org/content/groups/snapshots</url>
         </repository>
-    </repositories>-->
+    </repositories>
   
     <build>
         <plugins>
@@ -34,10 +34,11 @@
                     <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                     <tomeeHttpPort>8080</tomeeHttpPort>
                     <tomeeShutdownPort>8005</tomeeShutdownPort>
+                    <removeDefaultWebapps>false</removeDefaultWebapps>
                     <keepServerXmlAsthis>true</keepServerXmlAsthis>
                     <debug>false</debug>
                     <debugPort>5005</debugPort>
-                    <args>-XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
+                    <args>-Dfoo.host=mymailing.com -XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
                     <apps>
                         <app>com.grupokx:myenterprise-ear:1.0-SNAPSHOT:ear</app>
                     </apps>
@@ -46,6 +47,6 @@
                     </libs>
                 </configuration>                
             </plugin>
-        </plugins>        
+        </plugins>
     </build>
 </project>
