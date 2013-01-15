@@ -34,6 +34,7 @@
                     <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                     <tomeeHttpPort>8080</tomeeHttpPort>
                     <tomeeShutdownPort>8005</tomeeShutdownPort>
+                    <keepServerXmlAsthis>true</keepServerXmlAsthis>
                     <debug>false</debug>
                     <debugPort>5005</debugPort>
                     <args>-XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
