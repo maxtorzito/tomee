@@ -34,7 +34,7 @@
                     <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                     <tomeeHttpPort>8080</tomeeHttpPort>
                     <tomeeShutdownPort>8005</tomeeShutdownPort>
-                    <removeDefaultWebapps>false</removeDefaultWebapps>
+                    <removeDefaultWebapps>true</removeDefaultWebapps>
                     <keepServerXmlAsthis>true</keepServerXmlAsthis>
                     <debug>false</debug>
                     <debugPort>5005</debugPort>
