@@ -143,10 +143,7 @@
             </Host>
 
             <!--Dont forget to add this to your /etc/hosts/-->
-            <!--<Host name="www.mymailing.com" 
-                  path="" 
-                  appBase="/home/maxtorzito/github/tomee.git/myenterprise/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT/">
-            </Host>-->
+            <Host name="mymailing.com"></Host>
       
         </Engine>
     </Service>
