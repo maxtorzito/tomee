@@ -6,7 +6,7 @@
          version="3.0" metadata-complete="false">
     
     <display-name>Tomee Application</display-name>
-    <module-name>foo</module-name>
+    <module-name>myenterpise-web</module-name>
     
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
