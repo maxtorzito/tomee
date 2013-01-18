@@ -8,12 +8,10 @@
     <name>myenterprise</name>
     <modules>
         <module>myenterprise-ear</module>
-        <module>myenterprise-web</module>
         <module>myenterprise-ejb</module>
-        <module>kx-apps-mailing-resources</module>
-    </modules>
-  
-  
+        <module>myenterprise-web</module>
+        <module>myenterprise-web-2</module>
+    </modules>  
   
     <repositories>
         <repository>
@@ -39,7 +37,7 @@
                     <keepServerXmlAsthis>true</keepServerXmlAsthis>
                     <debug>false</debug>
                     <debugPort>5005</debugPort>
-                    <args>-Dmyenterpise-web.host=mymailing.com -Dmyenterpise-web2.host=mymailing2.com -XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
+                    <args>-Dmyenterpise-web.host=mymailing.com -Dmyenterpise-web-2.host=mymailing2.com -XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
                     <apps>
                         <app>com.grupokx:myenterprise-ear:1.0-SNAPSHOT:ear</app>
                     </apps>

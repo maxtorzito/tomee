@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
+        <actionName>CUSTOM-clean, install</actionName>
+        <displayName>clean, install</displayName>
+        <goals>
+            <goal>clean</goal>
+            <goal>install</goal>
+        </goals>
+    </action>
+    <action>
+        <actionName>CUSTOM-tomee run</actionName>
+        <displayName>tomee:run</displayName>
+        <goals>
+            <goal>tomee:run</goal>
+        </goals>
+    </action>
+    <!--
+    <action>
         <actionName>CUSTOM-clean, install and run</actionName>
         <displayName>clean, install and run</displayName>
         <goals>
@@ -9,19 +25,12 @@
             <goal>package</goal>
             <goal>tomee:run</goal>
         </goals>
-    </action>
+    </action>-->
     <action>
         <actionName>CUSTOM-tomee debug</actionName>
         <displayName>tomee debug</displayName>
         <goals>
             <goal>tomee:debug</goal>
-        </goals>
-    </action>
-    <action>
-        <actionName>CUSTOM-compile</actionName>
-        <displayName>compile</displayName>
-        <goals>
-            <goal>compile</goal>
         </goals>
     </action>
 </actions>
