@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
+        <actionName>CUSTOM-clean</actionName>
+        <displayName>clean</displayName>
+        <goals>
+            <goal>clean</goal>
+        </goals>
+    </action>
+    <action>
         <actionName>CUSTOM-clean, install</actionName>
         <displayName>clean, install</displayName>
         <goals>
