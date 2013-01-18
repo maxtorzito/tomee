@@ -4,8 +4,8 @@
  */
 package com.maxtorzito.web1.managedbean;
 
-import com.grupokx.managedbean.*;
-import com.grupokx.MyEJBBean;
+
+import com.maxtorzito.web1.MyEJBBean;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.inject.Named;

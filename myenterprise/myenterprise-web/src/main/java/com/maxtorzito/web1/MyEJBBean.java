@@ -1,6 +1,5 @@
 package com.maxtorzito.web1;
 
-import com.grupokx.*;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
