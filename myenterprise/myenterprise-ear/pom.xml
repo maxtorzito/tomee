@@ -43,6 +43,29 @@
   </build>
     <dependencies>
         <dependency>
+            <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
+            <artifactId>myfaces-extcdi-core-api</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
+            <artifactId>myfaces-extcdi-core-impl</artifactId>
+            <version>1.0.5</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
+            <artifactId>myfaces-extcdi-jsf20-module-api</artifactId>
+            <version>1.0.5</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
+            <artifactId>myfaces-extcdi-jsf20-module-impl</artifactId>
+            <version>1.0.5</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>com.grupokx</groupId>
             <artifactId>myenterprise-ejb</artifactId>
             <version>1.0-SNAPSHOT</version>

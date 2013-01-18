@@ -43,6 +43,14 @@
                     </apps>
                     <libs>
                         <lib>mysql:mysql-connector-java:5.1.19</lib>
+                        <!--
+                        <lib>org.apache.myfaces.extensions.cdi.core:myfaces-extcdi-core-api:1.0.5</lib>
+                        <lib>org.apache.myfaces.extensions.cdi.core:myfaces-extcdi-core-impl:1.0.5</lib>
+                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-jsf20-module-api:1.0.5</lib>
+                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-jsf20-module-impl:1.0.5</lib>
+                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-message-module-api:1.0.5</lib>
+                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-message-module-impl:1.0.5</lib>
+                        -->
                     </libs>
                 </configuration>                
             </plugin>
