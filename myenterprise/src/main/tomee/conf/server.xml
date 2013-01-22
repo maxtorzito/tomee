@@ -143,9 +143,8 @@
             </Host>
 
             <!--Dont forget to add this to your /etc/hosts/-->
-            <Host name="mymailing.com"></Host>
-            <Host name="mymailing2.com"></Host>
-      
+            <Host name="mymailing.com" autoDeploy="false"  appBase="dontexist"></Host>
+            <Host name="mymailing2.com" autoDeploy="false"  appBase="dontexist"></Host>
         </Engine>
     </Service>
 </Server>

@@ -20,6 +20,14 @@
             <url>https://repository.apache.org/content/groups/snapshots</url>
         </repository>
     </repositories>
+    
+    <properties>
+        <myDirectoryFolder>${user.home}/github/myenterprise</myDirectoryFolder>
+        <resourcesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-web/src/main/webapp</resourcesDir.kx-apps-mailing>
+        <targetResourcesDir.kx-apps-mailing>${myDirectoryFolder}/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT</targetResourcesDir.kx-apps-mailing>
+        <binariesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-web/target/classes</binariesDir.kx-apps-mailing>
+        <targetBinariesDir.kx-apps-mailing>${myDirectoryFolder}/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT/WEB-INF/classes</targetBinariesDir.kx-apps-mailing>
+    </properties>
   
     <build>
         <plugins>
@@ -32,8 +40,10 @@
                     <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
                     <tomeeHttpPort>8080</tomeeHttpPort>
                     <tomeeShutdownPort>8005</tomeeShutdownPort>
-                    <removeDefaultWebapps>true</removeDefaultWebapps>
                     <tomeeClassifier>webprofile</tomeeClassifier>
+                    <simpleLog>true</simpleLog>
+                    <removeDefaultWebapps>true</removeDefaultWebapps>
+                    <reloadOnUpdate>true</reloadOnUpdate>
                     <keepServerXmlAsthis>true</keepServerXmlAsthis>
                     <debug>false</debug>
                     <debugPort>5005</debugPort>
@@ -43,15 +53,24 @@
                     </apps>
                     <libs>
                         <lib>mysql:mysql-connector-java:5.1.19</lib>
-                        <!--
-                        <lib>org.apache.myfaces.extensions.cdi.core:myfaces-extcdi-core-api:1.0.5</lib>
-                        <lib>org.apache.myfaces.extensions.cdi.core:myfaces-extcdi-core-impl:1.0.5</lib>
-                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-jsf20-module-api:1.0.5</lib>
-                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-jsf20-module-impl:1.0.5</lib>
-                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-message-module-api:1.0.5</lib>
-                        <lib>org.apache.myfaces.extensions.cdi.modules:myfaces-extcdi-message-module-impl:1.0.5</lib>
-                        -->
                     </libs>
+                    
+                    <synchronizations>
+                        <synchronization>
+                            <extensions>
+                                <extension>.class</extension>
+                            </extensions>
+                            <updateOnlyExtensions>
+                                <updateOnlyExtension>.xhtml</updateOnlyExtension>
+                                <updateOnlyExtension>.html</updateOnlyExtension>
+                                <updateOnlyExtension>.css</updateOnlyExtension>                            
+                            </updateOnlyExtensions>
+                            <resourcesDir>${resourcesDir.kx-apps-mailing}</resourcesDir>
+                            <targetResourcesDir>${targetResourcesDir.kx-apps-mailing}</targetResourcesDir>
+                            <binariesDir>${binariesDir.kx-apps-mailing}</binariesDir>
+                            <targetBinariesDir>${targetBinariesDir.kx-apps-mailing}</targetBinariesDir>
+                        </synchronization>
+                    </synchronizations>
                 </configuration>                
             </plugin>
         </plugins>

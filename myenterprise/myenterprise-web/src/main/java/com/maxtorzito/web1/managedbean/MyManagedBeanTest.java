@@ -21,7 +21,7 @@ import org.apache.myfaces.extensions.cdi.core.api.scope.conversation.ViewAccessS
 public class MyManagedBeanTest implements Serializable {
     
     private String name="Hello World";
-    private MyEJBBean myEJB;
+    private MyEJBBean myEJB; 
     
     public MyManagedBeanTest() {
     }
