@@ -24,8 +24,8 @@
     <properties>
         <myDirectoryFolder>${user.home}/github/myenterprise</myDirectoryFolder>
         <resourcesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-web/src/main/webapp</resourcesDir.kx-apps-mailing>
-        <targetResourcesDir.kx-apps-mailing>${myDirectoryFolder}/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT</targetResourcesDir.kx-apps-mailing>
+        <targetResourcesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-ear/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT</targetResourcesDir.kx-apps-mailing>
         <binariesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-web/target/classes</binariesDir.kx-apps-mailing>
-        <targetBinariesDir.kx-apps-mailing>${myDirectoryFolder}/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT/WEB-INF/classes</targetBinariesDir.kx-apps-mailing>
+        <targetBinariesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-ear/target/apache-tomee/apps/myenterprise-ear-1.0-SNAPSHOT/myenterprise-web-1.0-SNAPSHOT/WEB-INF/classes</targetBinariesDir.kx-apps-mailing>
     </properties>
 </project>
