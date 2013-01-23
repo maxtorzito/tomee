@@ -1,46 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>myenterprise</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>myenterprise</artifactId>
+        <groupId>com.grupokx</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <groupId>com.grupokx</groupId>
+    <artifactId>myenterprise-ear</artifactId>
     <version>1.0-SNAPSHOT</version>
-  </parent>
+    <packaging>ear</packaging>
 
-  <groupId>com.grupokx</groupId>
-  <artifactId>myenterprise-ear</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>ear</packaging>
+    <name>myenterprise-ear</name>
 
-  <name>myenterprise-ear</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
+    </properties>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
-  </properties>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-ear-plugin</artifactId>
-        <version>2.6</version>
-        <configuration>
-            <version>6</version>
-            <defaultLibBundleDir>lib</defaultLibBundleDir>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.openejb.maven</groupId>
+                <artifactId>tomee-maven-plugin</artifactId>
+                <version>1.5.2-SNAPSHOT</version>
+                <inherited>false</inherited>
+                <configuration>
+                    <tomeeVersion>1.5.2-SNAPSHOT</tomeeVersion>
+                    <tomeeHttpPort>8080</tomeeHttpPort>
+                    <tomeeShutdownPort>8005</tomeeShutdownPort>
+                    <tomeeClassifier>webprofile</tomeeClassifier>
+                    <simpleLog>true</simpleLog>
+                    <removeDefaultWebapps>true</removeDefaultWebapps>
+                    <reloadOnUpdate>true</reloadOnUpdate>
+                    <keepServerXmlAsthis>true</keepServerXmlAsthis>
+                    <debug>false</debug>
+                    <debugPort>5005</debugPort>
+                    <args>-Dmyenterpise-web.host=mymailing.com -Dmyenterpise-web-2.host=mymailing2.com -XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
+                    <apps>
+                        <app>com.grupokx:myenterprise-ear:1.0-SNAPSHOT:ear</app>
+                    </apps>
+                    <libs>
+                        <lib>mysql:mysql-connector-java:5.1.19</lib>
+                    </libs>
+                    
+                    <synchronizations>
+                        <synchronization>
+                            <extensions>
+                                <extension>.class</extension>
+                            </extensions>
+                            <updateOnlyExtensions>
+                                <updateOnlyExtension>.xhtml</updateOnlyExtension>
+                                <updateOnlyExtension>.html</updateOnlyExtension>
+                                <updateOnlyExtension>.css</updateOnlyExtension>                            
+                            </updateOnlyExtensions>
+                            <resourcesDir>${resourcesDir.kx-apps-mailing}</resourcesDir>
+                            <targetResourcesDir>${targetResourcesDir.kx-apps-mailing}</targetResourcesDir>
+                            <binariesDir>${binariesDir.kx-apps-mailing}</binariesDir>
+                            <targetBinariesDir>${targetBinariesDir.kx-apps-mailing}</targetBinariesDir>
+                        </synchronization>
+                    </synchronizations>
+                </configuration>                
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <version>6</version>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
