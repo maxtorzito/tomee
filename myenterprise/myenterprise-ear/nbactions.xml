@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
-        <actionName>CUSTOM-clean</actionName>
-        <displayName>clean ALL MODULES</displayName>
-        <goals>
-            <goal>clean</goal>
-        </goals>
-        <activatedProfiles>
-            <activatedProfile>all</activatedProfile>
-        </activatedProfiles>
-    </action>
-    <action>
-        <actionName>CUSTOM-install</actionName>
-        <displayName>install ALL MODULES</displayName>
-        <goals>
-            <goal>install</goal>
-        </goals>
-        <activatedProfiles>
-            <activatedProfile>all</activatedProfile>
-        </activatedProfiles>
-        <properties>
-            <skipTests>true</skipTests>
-        </properties>
-    </action>
-    <action>
-        <actionName>CUSTOM-clean install</actionName>
-        <displayName>clean, install ALL MODULES</displayName>
-        <goals>
-            <goal>clean</goal>
-            <goal>install</goal>
-        </goals>
-        <activatedProfiles>
-            <activatedProfile>all</activatedProfile>
-        </activatedProfiles>
-        <properties>
-            <skipTests>true</skipTests>
-            <!--<maven.test.skip>true</maven.test.skip>-->
-        </properties>
-    </action>
-    <action>
         <actionName>CUSTOM-tomee run</actionName>
         <displayName>tomee run</displayName>
         <goals>

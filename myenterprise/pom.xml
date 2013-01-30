@@ -21,6 +21,14 @@
         </repository>
     </repositories>
     
+    <pluginRepositories>
+        <pluginRepository>
+            <id>apache-repo-snapshot</id>
+            <name>Apache Maven Repository</name>
+            <url>https://repository.apache.org/content/groups/snapshots</url>           
+        </pluginRepository>
+    </pluginRepositories>
+    
     <properties>
         <myDirectoryFolder>${user.home}/github/myenterprise</myDirectoryFolder>
         <resourcesDir.kx-apps-mailing>${myDirectoryFolder}/myenterprise-web/src/main/webapp</resourcesDir.kx-apps-mailing>

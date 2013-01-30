@@ -15,16 +15,14 @@
     <name>myenterprise-ejb</name>
 
     <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.openejb</groupId>
             <artifactId>apache-tomee</artifactId>
-            <version>1.5.0</version>
+            <version>1.5.2-SNAPSHOT</version>
             <classifier>webprofile</classifier>
             <type>zip</type>
             <scope>provided</scope>
@@ -44,32 +42,6 @@
             <version>5.1.19</version>
             <scope>provided</scope>
         </dependency>
-        
-        <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
-            <artifactId>myfaces-extcdi-core-api</artifactId>
-            <version>1.0.5</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
-            <artifactId>myfaces-extcdi-core-impl</artifactId>
-            <version>1.0.5</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
-            <artifactId>myfaces-extcdi-jsf20-module-api</artifactId>
-            <version>1.0.5</version>
-            <type>jar</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
-            <artifactId>myfaces-extcdi-jsf20-module-impl</artifactId>
-            <version>1.0.5</version>
-            <scope>provided</scope>
-        </dependency>        
     </dependencies>
 
     <build>
@@ -91,18 +63,6 @@
                     <ejbVersion>3.1</ejbVersion>
                 </configuration>
             </plugin>
-            
-            
-         
-            
-            
-            
-            
-            
-            
-            
-            
-            <!--GENERADOR DE METAMODEL-->
             <plugin>
                 <groupId>org.bsc.maven</groupId>
                 <artifactId>maven-processor-plugin</artifactId>
@@ -152,7 +112,6 @@
                 <configuration>
                     <includes>com/grupokx/*.class</includes>
                     <excludes>com/grupokx/*_.class</excludes>
-                    <!--<excludes>com/grupokx/mailing/modelo/**/*.class</excludes>-->
                     <addDefaultConstructor>true</addDefaultConstructor>
                     <enforcePropertyRestrictions>true</enforcePropertyRestrictions>
                 </configuration>
