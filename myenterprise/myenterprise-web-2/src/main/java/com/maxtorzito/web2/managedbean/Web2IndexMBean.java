@@ -5,6 +5,7 @@
 package com.maxtorzito.web2.managedbean;
 
 import java.io.Serializable;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
@@ -30,8 +31,12 @@ public class Web2IndexMBean implements Serializable {
             HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
             request.login("tomee", "tomee");
             System.out.println(">>>>>>>SUCESS<<<<<<<<<<<<<<<");
+            FacesMessage facesMsg = new  FacesMessage("SUCCESS");
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
         } catch (Exception e) {
             e.printStackTrace();
+            FacesMessage facesMsg = new  FacesMessage(e.toString());
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
         }
         return null;
     }
