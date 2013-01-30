@@ -46,6 +46,7 @@
                     </libs>
                     
                     <synchronizations>
+                        <!--WEB1-->
                         <synchronization>
                             <extensions>
                                 <extension>.class</extension>
@@ -55,10 +56,26 @@
                                 <updateOnlyExtension>.html</updateOnlyExtension>
                                 <updateOnlyExtension>.css</updateOnlyExtension>                            
                             </updateOnlyExtensions>
-                            <resourcesDir>${resourcesDir.kx-apps-mailing}</resourcesDir>
-                            <targetResourcesDir>${targetResourcesDir.kx-apps-mailing}</targetResourcesDir>
-                            <binariesDir>${binariesDir.kx-apps-mailing}</binariesDir>
-                            <targetBinariesDir>${targetBinariesDir.kx-apps-mailing}</targetBinariesDir>
+                            <resourcesDir>${resourcesDir.web1}</resourcesDir>
+                            <targetResourcesDir>${targetResourcesDir.web1}</targetResourcesDir>
+                            <binariesDir>${binariesDir.web1}</binariesDir>
+                            <targetBinariesDir>${targetBinariesDir.web1}</targetBinariesDir>
+                        </synchronization>
+                        
+                        <!--WEB2-->
+                        <synchronization>
+                            <extensions>
+                                <extension>.class</extension>
+                            </extensions>
+                            <updateOnlyExtensions>
+                                <updateOnlyExtension>.xhtml</updateOnlyExtension>
+                                <updateOnlyExtension>.html</updateOnlyExtension>
+                                <updateOnlyExtension>.css</updateOnlyExtension>                            
+                            </updateOnlyExtensions>
+                            <resourcesDir>${resourcesDir.web2}</resourcesDir>
+                            <targetResourcesDir>${targetResourcesDir.web2}</targetResourcesDir>
+                            <binariesDir>${binariesDir.web2}</binariesDir>
+                            <targetBinariesDir>${targetBinariesDir.web2}</targetBinariesDir>
                         </synchronization>
                     </synchronizations>
                 </configuration>                
