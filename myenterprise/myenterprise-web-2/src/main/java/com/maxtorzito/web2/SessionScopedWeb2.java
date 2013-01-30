@@ -13,11 +13,11 @@ import javax.faces.bean.SessionScoped;
  *
  * @author maxtorzito
  */
-@Named
+@Named(value = "sessionScopedWeb2")
 @SessionScoped
 public class SessionScopedWeb2 implements Serializable{
     
-    private String sesionValue="THIS IS THE VALUE OF THE SESSION SCOPED WEB 2";
+    private String sesionValue="THIS IS THE VALUE OF THE SESSION SCOPED WEB 2 (two)";
 
     public SessionScopedWeb2() {
     }
