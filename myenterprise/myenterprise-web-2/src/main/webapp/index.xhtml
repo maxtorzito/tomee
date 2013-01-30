@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core" 
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
         <title>Facelet Title</title>
@@ -11,6 +12,14 @@
         <div>HELLO FROM MY ENTERPRISE WEB 2</div>
         <br/>
         Reading value from session scoped in web 2: #{sessionScopedWeb2.sesionValue}
+        <br/>
+        <h:form>
+            <h:messages id="messages"/>
+            <h:commandButton value="Login" actionListener="#{web2IndexMBean.login}">
+                <f:ajax render="messages" />
+            </h:commandButton>
+        </h:form>
+        
     </h:body>
 </html>
 
