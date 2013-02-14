@@ -4,9 +4,11 @@
  */
 package com.maxtorzito.web1.managedbean;
 
+import com.maxtorzito.resources.model.User;
 import java.io.Serializable;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,8 +21,13 @@ import javax.servlet.http.HttpServletRequest;
 public class Web1IndexMBean implements Serializable{
     
     private String value="Hello from Web1IndexMBean (web 1)";
+    private User userSelected;
 
     public Web1IndexMBean() {
+    }
+    
+    public void printSelectedUser(ActionEvent event){
+        System.out.println(userSelected!=null ? userSelected.toString() : "USER SELECTED IS NULL");
     }
     
     public String login() throws Exception{
