@@ -4,7 +4,7 @@
  */
 package com.maxtorzito.web1.managedbean;
 
-import com.maxtorzito.resources.model.User;
+import com.maxtorzito.shared.model.User;
 import java.io.Serializable;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;

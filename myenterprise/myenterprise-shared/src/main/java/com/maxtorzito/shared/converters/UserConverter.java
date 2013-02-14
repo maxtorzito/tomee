@@ -1,6 +1,7 @@
-package com.maxtorzito.resources.converters;
+package com.maxtorzito.shared.converters;
 
-import com.maxtorzito.resources.model.User;
+
+import com.maxtorzito.shared.model.User;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;

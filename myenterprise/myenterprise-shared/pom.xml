@@ -8,11 +8,11 @@
     </parent>
 
     <groupId>com.grupokx</groupId>
-    <artifactId>myenterprise-resources</artifactId>
+    <artifactId>myenterprise-shared</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>myenterprise-resources</name>
+    <name>myenterprise-shared</name>
 
     <dependencies>
         <dependency>

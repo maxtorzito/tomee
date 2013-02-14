@@ -11,7 +11,7 @@
         <module>myenterprise-ejb</module>
         <module>myenterprise-web</module>
         <module>myenterprise-web-2</module>
-        <module>myenterprise-resources</module>
+        <module>myenterprise-shared</module>
     </modules>  
   
     <repositories>

@@ -144,7 +144,7 @@
         <!--NEW DEPENDENCY-->
         <dependency>
             <groupId>com.grupokx</groupId>
-            <artifactId>myenterprise-resources</artifactId>
+            <artifactId>myenterprise-shared</artifactId>
             <version>1.0</version>
             <type>jar</type>
         </dependency>
