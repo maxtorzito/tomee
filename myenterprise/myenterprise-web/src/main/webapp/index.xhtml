@@ -16,7 +16,7 @@
         <h:form>
             <h:messages id="messages"/>
 
-            <h:selectOneMenu value="#{web1IndexMBean}" converter="userConverter">
+            <h:selectOneMenu value="#{web1IndexMBean.userSelected}" converter="userConverter">
                 <f:selectItem itemLabel="John" itemValue="1,John,johnpass1"/>
                 <f:selectItem itemLabel="Peter" itemValue="2,Peter,peterpass2"/>
                 <f:selectItem itemLabel="Jacob" itemValue="3,Jacob,jacobpass3"/>
