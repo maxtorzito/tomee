@@ -50,7 +50,13 @@ public class Web1IndexMBean implements Serializable{
     public void setValue(String value) {
         this.value = value;
     }
-    
-    
+
+    public User getUserSelected() {
+        return userSelected;
+    }
+
+    public void setUserSelected(User userSelected) {
+        this.userSelected = userSelected;
+    }
     
 }
