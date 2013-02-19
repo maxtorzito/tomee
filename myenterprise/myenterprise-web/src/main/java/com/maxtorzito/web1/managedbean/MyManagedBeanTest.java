@@ -8,7 +8,9 @@ package com.maxtorzito.web1.managedbean;
 import com.maxtorzito.web1.MyEJBBean;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 import javax.inject.Named;
+import org.apache.myfaces.extensions.cdi.core.api.navigation.ViewNavigationHandler;
 import org.apache.myfaces.extensions.cdi.core.api.provider.BeanManagerProvider;
 import org.apache.myfaces.extensions.cdi.core.api.scope.conversation.ViewAccessScoped;
 
@@ -22,6 +24,8 @@ public class MyManagedBeanTest implements Serializable {
     
     private String name="Hello World";
     private MyEJBBean myEJB; 
+    @Inject
+    private ViewNavigationHandler vnh;
     
     public MyManagedBeanTest() {
     }
