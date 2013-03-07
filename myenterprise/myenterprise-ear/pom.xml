@@ -36,9 +36,9 @@
                     <keepServerXmlAsthis>true</keepServerXmlAsthis>
                     <debug>false</debug>
                     <debugPort>5005</debugPort>
-                    <!--
+                    
                     <args>-Dmyenterpise-web.host=mymailing.com -Dmyenterpise-web-2.host=mymailing2.com -XX:MaxPermSize=256M -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled</args>
-                    -->
+                    
                     <apps>
                         <app>com.grupokx:myenterprise-ear:1.0-SNAPSHOT:ear</app>
                     </apps>
