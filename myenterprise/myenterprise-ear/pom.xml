@@ -46,36 +46,42 @@
                     
                     <synchronizations>
                         <!--WEB1-->
-                        <synchronization>
+                        <synch>
                             <extensions>
                                 <extension>.class</extension>
                             </extensions>
+                            <source>${binariesDir.web1}</source>
+                            <target>${targetBinariesDir.web1}</target>
+                        </synch>
+                        
+                        <synch>
                             <updateOnlyExtensions>
                                 <updateOnlyExtension>.xhtml</updateOnlyExtension>
                                 <updateOnlyExtension>.html</updateOnlyExtension>
                                 <updateOnlyExtension>.css</updateOnlyExtension>                            
                             </updateOnlyExtensions>
-                            <resourcesDir>${resourcesDir.web1}</resourcesDir>
-                            <targetResourcesDir>${targetResourcesDir.web1}</targetResourcesDir>
-                            <binariesDir>${binariesDir.web1}</binariesDir>
-                            <targetBinariesDir>${targetBinariesDir.web1}</targetBinariesDir>
-                        </synchronization>
+                            <source>${resourcesDir.web1}</source>
+                            <target>${targetResourcesDir.web1}</target>
+                        </synch>
                         
                         <!--WEB2-->
-                        <synchronization>
+                        <synch>
                             <extensions>
                                 <extension>.class</extension>
                             </extensions>
+                            <source>${binariesDir.web2}</source>
+                            <target>${targetBinariesDir.web2}</target>
+                        </synch>
+                        
+                         <synch>
                             <updateOnlyExtensions>
                                 <updateOnlyExtension>.xhtml</updateOnlyExtension>
                                 <updateOnlyExtension>.html</updateOnlyExtension>
                                 <updateOnlyExtension>.css</updateOnlyExtension>                            
                             </updateOnlyExtensions>
-                            <resourcesDir>${resourcesDir.web2}</resourcesDir>
-                            <targetResourcesDir>${targetResourcesDir.web2}</targetResourcesDir>
-                            <binariesDir>${binariesDir.web2}</binariesDir>
-                            <targetBinariesDir>${targetBinariesDir.web2}</targetBinariesDir>
-                        </synchronization>
+                            <source>${resourcesDir.web2}</source>
+                            <target>${targetResourcesDir.web2}</target>
+                        </synch>
                     </synchronizations>
                 </configuration>                
             </plugin>
