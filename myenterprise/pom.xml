@@ -31,6 +31,12 @@
     </pluginRepositories>
     
     <properties>
+        <apache.tomee.version>1.6.0-SNAPSHOT</apache.tomee.version>
+        <apache.openjpa.version>2.2.1</apache.openjpa.version>
+        <apache.myfaces.version>2.1.10</apache.myfaces.version>
+        <apache.myfaces.codi.version>1.0.5</apache.myfaces.codi.version>  
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
         <myDirectoryFolder>${user.home}/repositorios/mygit/tomee.git/trunk/myenterprise</myDirectoryFolder>
         
         <!--DIRS FOR WEBAPP 1-->
