@@ -29,7 +29,21 @@ public class Web2IndexMBean implements Serializable {
             FacesContext context = FacesContext.getCurrentInstance();
             HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
             request.login("tomee", "tomee");
-            System.out.println(">>>>>>>SUCESS<<<<<<<<<<<<<<<");
+            System.out.println(">>>>>>>LOGIN SUCESS<<<<<<<<<<<<<<<");
+            return "private/welcome.xhtml?faces-redirect=true";
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String logout() {
+        try {
+            System.out.println("logout.....");
+            FacesContext context = FacesContext.getCurrentInstance();
+            HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
+            request.logout();
+            System.out.println(">>>>>>>LOGOUT SUCESS<<<<<<<<<<<<<<<");
         } catch (Exception e) {
             e.printStackTrace();
         }
